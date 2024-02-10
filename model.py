@@ -1,9 +1,8 @@
 import torch
 import re
-import spacy
+# import spacy
 from transformers import GPT2LMHeadModel, GPT2TokenizerFast
 from collections import OrderedDict
-
 
 
 class GPT2PPL:
@@ -12,7 +11,7 @@ class GPT2PPL:
         self.model_id = model_id
         self.model = GPT2LMHeadModel.from_pretrained(model_id).to(device)
         self.tokenizer = GPT2TokenizerFast.from_pretrained(model_id)
-        self.nlp = spacy.load("en_core_web_sm") 
+        # self.nlp = spacy.load("en_core_web_sm") 
 
         self.max_length = self.model.config.n_positions
         self.stride = 512
