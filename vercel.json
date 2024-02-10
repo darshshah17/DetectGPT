@@ -5,7 +5,7 @@
     ],
     "routes": [
       { "handle": "filesystem" },
-      { "src": "/.*", "dest": "/GPTZero-Plus/index.html" }
+      { "src": "/.*", "dest": "/GPTZero-Plus/templates/index.html" }
     ]
   }
   
