@@ -1,7 +1,7 @@
 {
     "version": 2,
     "builds": [
-      { "src": "GPTZero-Plus/**", "use": "@vercel/static-build" }
+      { "src": "GPTZero-Plus/app.py", "use": "@vercel/python" }
     ],
     "routes": [
       { "handle": "filesystem" },
