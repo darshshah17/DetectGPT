@@ -1,0 +1,11 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "GPTZero-Plus/**", "use": "@vercel/static-build" }
+    ],
+    "routes": [
+      { "handle": "filesystem" },
+      { "src": "/.*", "dest": "/GPTZero-Plus/index.html" }
+    ]
+  }
+  
