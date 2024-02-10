@@ -1,0 +1,34 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPTZero+</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body class="home-container">
+    <div class="home-header">
+        <h1>GPTZero+</h1>
+        <form method="post">
+            <textarea name="prompt" rows="4" cols="50" placeholder="Enter Text Prompt..."></textarea><br>
+            <input type="submit" value="Submit" class="home-submit-button">
+        </form>
+
+        {% if prompt %}
+            <!-- Show results only if there is a prompt -->
+            <div class="results-section">
+                <h2>Model Output:</h2>
+                <p>{{ output }}</p>
+
+                <h2>Results:</h2>
+                <p>Perplexity: {{ results["Perplexity"] }}</p>
+                <p>Perplexity per line: {{ results["Perplexity per line"] }}</p>
+                <p>Burstiness: {{ results["Burstiness"] }}</p>
+                <p>Label: {{ results["label"] }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
