@@ -5,6 +5,6 @@
   ],
   "routes": [
     { "handle": "filesystem" },
-    { "src": "/.*", "dest": "/templates/index.html" }
+    { "src": "/.*", "dest": "/app.py" }
   ]
 }
