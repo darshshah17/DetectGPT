@@ -1,13 +1,10 @@
 {
-  "functions": {
-    "./api/app.py": {
-      "runtime": "python3.8@3.8.12",
-      "memory": 128,
-      "maxDuration": 10
-    }
-  },
+  "version": 2,
+  "builds": [
+    { "src": "app.py", "use": "@vercel/python" }
+  ],
   "routes": [
-    { "src": "/api/predict", "dest": "./api/app.py" },
-    { "src": "/(.*)", "dest": "./index.html" }
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/app.py" }
   ]
 }
