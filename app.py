@@ -8,14 +8,14 @@ gpt2_model = GPT2PPL()
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('templates/index.html')
 
 @app.route('/', methods=['POST'])
 def predict():
     if request.method == 'POST':
         prompt = request.form['prompt']
         results, output = gpt2_model(prompt)
-        return render_template('index.html', prompt=prompt, output=output, results=results)
+        return render_template('templates/index.html', prompt=prompt, output=output, results=results)
 
 if __name__ == '__main__':
     app.run(debug=True)
