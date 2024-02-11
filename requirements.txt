@@ -3,3 +3,4 @@ transformers
 torch
 spacy
 gunicorn
+python==3.8.12
