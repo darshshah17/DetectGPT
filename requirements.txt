@@ -1,5 +1,4 @@
-Flask==3.0.2
-transformers==4.37.2
-torch==2.2.0
-spacy==3.7.2
-python==3.8.12
+Flask
+transformers
+torch
+spacy

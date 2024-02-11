@@ -1,0 +1,21 @@
+{
+    "hosting": {
+      "public": "templates",  // This is the directory containing your HTML files.
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "/static/**",  // Assuming CSS files are in the "css" folder.
+          "destination": "/static/$1"
+        },
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  }
+  
